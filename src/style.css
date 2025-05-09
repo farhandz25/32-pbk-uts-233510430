@@ -183,3 +183,32 @@ body, html {
   text-decoration: line-through;
   opacity: 0.6;
 }
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: var(--danger);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.progress-bar {
+  height: 8px;
+  background: #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.progress {
+  height: 100%;
+  background: var(--accent);
+  transition: width 0.4s ease;
+}
