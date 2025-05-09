@@ -30,4 +30,25 @@
         Fokus hanya lagu belum selesai
       </label>
     </div>
+
+    <transition-group name="fade-slide" tag="ul" class="song-list">
+      <li class="song-item" v-for="(song, index) in displayedSongs" :key="index">
+        <input type="checkbox" v-model="song.done" />
+        <span :class="{ done: song.done }">{{ song.name }}</span>
+        <button class="delete-btn" @click="deleteSong(index)">🗑️</button>
+      </li>
+    </transition-group>
+
+    <!-- Statistik penggunaan -->
+    <div class="stats">
+      <p>Total lagu: {{ songs.length }}</p>
+      <p>Selesai: {{ completed }}</p>
+      <p>Belum selesai: {{ remaining }}</p>
+    </div>
+
+    <div class="footer">
+      <span>{{ remaining }} lagu tersisa</span>
+      <button class="btn danger-btn" @click="clearCompleted">Hapus yang selesai</button>
+    </div>
+    
     </template>
