@@ -50,5 +50,22 @@
       <span>{{ remaining }} lagu tersisa</span>
       <button class="btn danger-btn" @click="clearCompleted">Hapus yang selesai</button>
     </div>
+
+    <!-- Audio element -->
+    <audio ref="clickSound" src="https://www.myinstants.com/media/sounds/mouse-click.mp3"></audio>
     
     </template>
+
+<script>
+export default {
+  data() {
+    return {
+      theme: localStorage.getItem('theme') || 'light',
+      newSong: '',
+      songs: [],
+      filter: 'all',
+      focusMode: false,
+    };
+  },
+};
+</script>
