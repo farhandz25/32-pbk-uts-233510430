@@ -13,4 +13,21 @@
     </form>
 
     </div>
+
+    <div class="filters">
+      <button :class="{ active: filter === 'all' }" @click="filter = 'all'">Semua</button>
+      <button :class="{ active: filter === 'active' }" @click="filter = 'active'">Belum</button>
+      <button :class="{ active: filter === 'done' }" @click="filter = 'done'">Selesai</button>
+    </div>
+
+    <div class="progress-bar">
+      <div class="progress" :style="{ width: progress + '%' }"></div>
+    </div>
+
+    <div class="focus-mode">
+      <label>
+        <input type="checkbox" v-model="focusMode" />
+        Fokus hanya lagu belum selesai
+      </label>
+    </div>
     </template>
