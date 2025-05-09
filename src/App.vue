@@ -67,5 +67,28 @@ export default {
       focusMode: false,
     };
   },
+computed: {
+    filteredSongs() {
+      if (this.filter === 'active') return this.songs.filter(s => !s.done);
+      if (this.filter === 'done') return this.songs.filter(s => s.done);
+      return this.songs;
+    },
+    displayedSongs() {
+      return this.focusMode
+        ? this.filteredSongs.filter(s => !s.done)
+        : this.filteredSongs;
+    },
+    remaining() {
+      return this.songs.filter(s => !s.done).length;
+    },
+    completed() {
+      return this.songs.filter(s => s.done).length;
+    },
+    progress() {
+      if (this.songs.length === 0) return 0;
+      const doneCount = this.songs.filter(s => s.done).length;
+      return Math.round((doneCount / this.songs.length) * 100);
+    },
+  },
 };
 </script>
