@@ -107,6 +107,17 @@ methods: {
       this.songs.splice(index, 1);
       this.playClick();
     },
+    clearCompleted() {
+      this.songs = this.songs.filter(s => !s.done);
+      this.playClick();
+    },
+    playClick() {
+      const audio = this.$refs.clickSound;
+      if (audio) {
+        audio.currentTime = 0;
+        audio.play();
+      }
+    },
   },
 };
 </script>
