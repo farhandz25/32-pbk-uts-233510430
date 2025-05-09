@@ -17,3 +17,21 @@
   --danger: #ff4d4f;
   --shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
 }
+
+[data-theme="light"] {
+  --bg: var(--bg-light);
+  --card: var(--card-light);
+  --text: var(--text-light);
+  --input-bg: var(--input-light);
+  --input-text: var(--input-text-light);
+  --background-img: url('https://i.ibb.co/6sJh47y/music-notes-lightcream.png');
+}
+
+[data-theme="dark"] {
+  --bg: var(--bg-dark);
+  --card: var(--card-dark);
+  --text: var(--text-dark);
+  --input-bg: var(--input-dark);
+  --input-text: var(--input-text-dark);
+  --background-img: url('https://i.ibb.co/2yHnmgL/music-bg-dark.png');
+}
