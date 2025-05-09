@@ -90,5 +90,23 @@ computed: {
       return Math.round((doneCount / this.songs.length) * 100);
     },
   },
+methods: {
+    toggleTheme() {
+      this.playClick()
+      this.theme = this.theme === 'light' ? 'dark' : 'light';
+      localStorage.setItem('theme', this.theme);
+    },
+    addSong() {
+      if (this.newSong.trim()) {
+        this.songs.push({ name: this.newSong.trim(), done: false });
+        this.newSong = '';
+        this.playClick();
+      }
+    },
+    deleteSong(index) {
+      this.songs.splice(index, 1);
+      this.playClick();
+    },
+  },
 };
 </script>
