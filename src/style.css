@@ -126,3 +126,60 @@ body, html {
 .btn.danger-btn {
   background: var(--danger);
 }
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.filters button {
+  padding: 10px 18px;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--accent);
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.filters .active {
+  background: var(--accent);
+  color: white;
+  box-shadow: 0 0 10px var(--accent);
+}
+
+.song-list {
+  list-style: none;
+  padding: 0;
+}
+
+.song-item {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s;
+}
+.song-item:hover {
+  transform: translateY(-2px);
+}
+
+.song-item input[type="checkbox"] {
+  margin-right: 14px;
+  transform: scale(1.2);
+}
+
+.song-item span {
+  flex: 1;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.song-item .done {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
