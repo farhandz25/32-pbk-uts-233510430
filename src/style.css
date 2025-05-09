@@ -35,3 +35,27 @@
   --input-text: var(--input-text-dark);
   --background-img: url('https://i.ibb.co/2yHnmgL/music-bg-dark.png');
 }
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  background-image: var(--background-img);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.app-container {
+  max-width: 750px;
+  margin: 60px auto;
+  padding: 40px;
+  background: var(--card);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
