@@ -212,3 +212,34 @@ body, html {
   background: var(--accent);
   transition: width 0.4s ease;
 }
+
+.focus-mode {
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+.focus-mode input {
+  margin-right: 8px;
+}
+
+.stats {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: var(--text);
+  background: rgba(0, 0, 0, 0.03);
+  padding: 10px 16px;
+  border-radius: 12px;
+  line-height: 1.5;
+}
+
+.fade-slide-enter-active, .fade-slide-leave-active {
+  transition: all 0.4s ease;
+}
+.fade-slide-enter-from {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.fade-slide-leave-to {
+  opacity: 0;
+  transform: translateY(-10px);
+}
